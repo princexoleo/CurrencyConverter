@@ -83,7 +83,7 @@ public class HomeActivity extends AppCompatActivity {
                     if(!isSwap)
                     {
 
-                        if (inputCurrency == null) {
+                        if (inputCurrency == null) { //check input null or not
                             outputEditText.setText("0.00"+" "+currencyTwo[spinnerTwoPosition]);
                             Toast.makeText(HomeActivity.this, "Invalid input ", Toast.LENGTH_SHORT).show();
                         }else {
