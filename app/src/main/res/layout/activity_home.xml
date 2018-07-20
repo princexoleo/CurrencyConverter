@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_lauouy_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/from_currency_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="convert to"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_toStartOf="@+id/to_currency_id"
+            android:layout_toEndOf="@+id/from_currency_id"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+        <Spinner
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:id="@+id/to_currency_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/relative_lauouy_id"
+        android:layout_marginTop="20dp"
+
+        android:id="@+id/input_currency_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_currency"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_below="@id/input_currency_tv_id"
+        android:id="@+id/user_input_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@color/colorPrimary"
+        android:inputType="number"
+        android:hint="0.00 USD"
+        android:textStyle="bold"
+        android:shadowColor="@android:color/darker_gray"
+        app:met_baseColor="@color/primaryLightColor"
+        />
+    <TextView
+        android:layout_below="@id/user_input_id"
+
+        android:id="@+id/output_currency_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/output_currency"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+
+        android:layout_below="@id/output_currency_tv_id"
+        android:id="@+id/user_output_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@color/colorPrimary"
+        android:editable="false"
+        android:hint="00.00"
+        android:textStyle="bold"
+        android:shadowColor="@android:color/darker_gray"
+        app:met_baseColor="@color/primaryLightColor"
+
+        />
+
+
+     <LinearLayout
+         android:layout_below="@id/user_output_id"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+         <info.hoang8f.widget.FButton
+             android:id="@+id/convert_button"
+             android:text="convert"
+
+             android:textColor="@android:color/white"
+             android:layout_width="match_parent"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_height="wrap_content"
+             app:fButtonColor="@color/primaryLightColor"
+             app:shadowColor="@android:color/black"
+             app:shadowEnabled="true"
+             app:shadowHeight="5dp"
+             app:cornerRadius="8dp"
+
+             />
+         <info.hoang8f.widget.FButton
+             android:id="@+id/swap_button"
+             android:text="swap"
+             android:textColor="@android:color/white"
+             android:layout_width="match_parent"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_height="wrap_content"
+             app:fButtonColor="@color/primaryLightColor"
+             app:shadowColor="@android:color/black"
+             app:shadowEnabled="true"
+             app:shadowHeight="5dp"
+             app:cornerRadius="8dp"
+
+             />
+         <info.hoang8f.widget.FButton
+             android:id="@+id/reset_button"
+             android:text="reset"
+             android:textColor="@android:color/white"
+             android:layout_width="match_parent"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_height="wrap_content"
+             app:fButtonColor="@color/primaryLightColor"
+             app:shadowColor="@android:color/black"
+             app:shadowEnabled="true"
+             app:shadowHeight="5dp"
+             app:cornerRadius="8dp"
+
+             />
+
+     </LinearLayout>
+
+</RelativeLayout>
